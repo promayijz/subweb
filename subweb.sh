@@ -10,7 +10,7 @@ cat /root/subweb/api/aff.py
 
 netstat -tupln | egrep '10010|10086'
 
-if [ $? ! -eq 0 ]; then
+if [ $? -eq 0 ]; then
     ./stop_subweb.sh
 else
     cd /root/subweb/config
